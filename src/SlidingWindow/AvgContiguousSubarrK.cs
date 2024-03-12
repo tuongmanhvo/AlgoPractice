@@ -1,3 +1,6 @@
+/// <summary>
+/// Given an array, find the average of all contiguous subarrays of size 'K' in it.
+/// </summary>
 public class AvgContiguousSubarrK
 {
     public static double[] Run(int k, int[] arr)
