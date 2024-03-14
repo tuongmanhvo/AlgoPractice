@@ -7,7 +7,7 @@ public class PermutationInString
     {
         var windowStart = 0;
         var matched = 0;
-        var charFrenquency = BuildFrequencyFromPattern(pattern);
+        var charFrenquency = Helper.BuildFrequencyFromPattern(pattern);
 
         for (var windowEnd = 0; windowEnd < str.Length; windowEnd++)
         {
@@ -41,11 +41,4 @@ public class PermutationInString
         return false;
     }
 
-    private static Dictionary<char, int> BuildFrequencyFromPattern(string pattern) =>
-        pattern.Aggregate(new Dictionary<char, int>(), (map, c) =>
-        {
-            map.TryAdd(c, 0);
-            map[c] += 1;
-            return map;
-        });
 }
