@@ -9,18 +9,17 @@ public class RemoveDuplicate
     public static int Run(int[] arr)
     {
         if (arr.Length == 0) return 0;
-        
-        var nextNotDup = 1;
-        var i = 1;
 
-        while (i < arr.Length)
+        var nextNotDup = 1;
+
+        for (var i = 1; i < arr.Length; i++)
         {
             if (arr[nextNotDup - 1] != arr[i])
             {
                 arr[nextNotDup] = arr[i];
                 nextNotDup += 1;
             }
-            i += 1;
+
         }
 
         return nextNotDup;
